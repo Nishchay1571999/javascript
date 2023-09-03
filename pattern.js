@@ -1,3 +1,11 @@
+function starLine(length) {
+  var str = "";
+  for (var i = 0; i < length; i++) {
+    str += "*";
+  }
+  return str;
+}
+
 function pattern1(length) {
   for (var i = 0; i < length; i++) {
     var str = "";
@@ -24,5 +32,19 @@ function pattern2(length) {
   }
 }
 
-pattern1(10);
-pattern2(10);
+function pattern3(length) {
+  for (var i = 0; i < length; i++) {
+    var str = "";
+    if (i % 2 !== 0) {
+      for (var j = 0; j < (length - i) / 2; j++) {
+        str += " ";
+      }
+      str += starLine(i);
+      console.log(str);
+    }
+  }
+}
+
+// pattern1(10);
+// pattern2(10);
+pattern3(10);
